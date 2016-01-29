@@ -1,2 +1,2 @@
-Hello World!
-Everyone!
+Hello my name is William Lin! Java is a great programming language.
+My first programming language was Java and I am glad it was Java.

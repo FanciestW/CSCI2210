@@ -1,8 +1,8 @@
-/*=============================================================================
+/**
 * Created By: William Lin
 * CSCI 2210-01-S16 Java Programming
 * Assignment 2
-*============================================================================*/
+*/
 
 import java.io.*;
 import java.util.*;
@@ -18,6 +18,12 @@ public class Assignment2 {
         search(fileName, keyword);
     }
 
+    /**
+     * Searches the given file for how many occurrences of the keyword
+     * @param fileName The Name of the file to read from
+     * @param keyword The keyword for program to search for
+     * @return The occurrence of the keyword in the given file.
+     */
     public static int search(String fileName, String keyword){
         String line;
         try{
