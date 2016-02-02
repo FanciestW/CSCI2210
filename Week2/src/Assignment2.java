@@ -4,18 +4,21 @@
 * Assignment 2
 */
 
-import java.io.*;
-import java.util.*;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Assignment2 {
 
     public static void main(String[] args){
         System.out.print("File Path: ");
         Scanner scInput = new Scanner(System.in);
-        String fileName = scInput.nextLine(); //Must Enter Full Path of File
+        String fileName = System.getProperty("user.dir") + "/src/" + scInput.nextLine();
         System.out.print("Keyword: ");
         String keyword = scInput.nextLine();
-        search(fileName, keyword);
+        System.out.println("Occurrences: " + search(fileName, keyword));
     }
 
     /**
@@ -26,11 +29,12 @@ public class Assignment2 {
      */
     public static int search(String fileName, String keyword){
         String line;
+        int count = 0;
         try{
             FileReader fileRead = new FileReader(fileName);
             BufferedReader bufferRead = new BufferedReader(fileRead);
             while((line = bufferRead.readLine()) != null){
-                System.out.println(line);
+                count += searchLine(line, keyword);
             }
         }
         //Catches if the file is not found
@@ -41,7 +45,27 @@ public class Assignment2 {
         catch(IOException ex){
             System.out.println("Error Reading File " + fileName);
         }
-        return 0;
+        return count;
+    }
+
+    /**
+     * Finds the keyword in a given string.
+     * @param line the string to search in
+     * @param keyword the string to search for
+     * @return the number of occurrences or -1 if none.
+     */
+    public static int searchLine(String line, String keyword){
+        int count = 0;
+        int pos = 0;
+        while(true){
+            int find = line.indexOf(keyword, pos);
+            if(find >= 0){
+                count++;
+                pos = find + keyword.length();
+            }
+            else break;
+        }
+        return count;
     }
 
 }
