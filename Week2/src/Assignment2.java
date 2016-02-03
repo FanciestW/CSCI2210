@@ -12,60 +12,72 @@ import java.util.Scanner;
 
 public class Assignment2 {
 
-    public static void main(String[] args){
-        System.out.print("File Path: ");
+    public static void main(String[] args) {
         Scanner scInput = new Scanner(System.in);
+
+        System.out.print("File Path: ");
         String fileName = System.getProperty("user.dir") + "/src/" + scInput.nextLine();
+
         System.out.print("Keyword: ");
         String keyword = scInput.nextLine();
-        System.out.println("Occurrences: " + search(fileName, keyword));
+
+        String text = getText(fileName);
+        System.err.println(text);
+
+        long startTime = System.nanoTime();
+        System.out.println("Occurrences: " + mySearch(text, keyword));
+        long endTime = System.nanoTime();
+        double diffTime = (endTime - startTime)/1e6;
+
+        System.out.println(diffTime );
+    }
+
+    /**
+     * Gets content of file and returns it in a String
+     * @param fileName the file name.
+     * @return a String containing the content of file
+     */
+    public static String getText(String fileName){
+        String text = "";
+        try{
+            FileReader fileReader = new FileReader(fileName);
+            int i ;
+
+            while((i =  fileReader.read())!=-1){
+                char ch = (char)i;
+
+                text = text + ch;
+            }
+        }
+        catch(FileNotFoundException ex){
+            System.out.println("File Not Found");
+        }
+        catch(IOException ex){
+            System.out.println("Error Reading File");
+        }
+
+        return text;
     }
 
     /**
      * Searches the given file for how many occurrences of the keyword
-     * @param fileName The Name of the file to read from
-     * @param keyword The keyword for program to search for
+     *
+     * @param text String of text to search
+     * @param keyword  The keyword for program to search for
      * @return The occurrence of the keyword in the given file.
      */
-    public static int search(String fileName, String keyword){
-        String line;
-        int count = 0;
-        try{
-            FileReader fileRead = new FileReader(fileName);
-            BufferedReader bufferRead = new BufferedReader(fileRead);
-            while((line = bufferRead.readLine()) != null){
-                count += searchLine(line, keyword);
-            }
-        }
-        //Catches if the file is not found
-        catch(FileNotFoundException ex){
-            System.out.println("File " + fileName + " Not Found");
-        }
-        //Catches if there is a file read error
-        catch(IOException ex){
-            System.out.println("Error Reading File " + fileName);
-        }
-        return count;
-    }
-
-    /**
-     * Finds the keyword in a given string.
-     * @param line the string to search in
-     * @param keyword the string to search for
-     * @return the number of occurrences or -1 if none.
-     */
-    public static int searchLine(String line, String keyword){
+    public static int mySearch(String text, String keyword) {
         int count = 0;
         int pos = 0;
-        while(true){
-            int find = line.indexOf(keyword, pos);
-            if(find >= 0){
+        while (true) {
+            int find = text.indexOf(keyword, pos);
+            if (find >= 0) {
                 count++;
                 pos = find + keyword.length();
-            }
-            else break;
+            } else break;
         }
         return count;
     }
 
+    //public static int commonCount()
 }
