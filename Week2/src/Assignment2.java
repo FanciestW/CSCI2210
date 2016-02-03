@@ -73,11 +73,11 @@ public class Assignment2 {
     }
 
     /**
-     * Searches the given file for how many occurrences of the keyword
-     *
+     * Method 1 for searching for keyword in text
+     * Written by William Lin
      * @param text String of text to search
      * @param keyword  The keyword for program to search for
-     * @return The occurrence of the keyword in the given file.
+     * @return The occurrence of the keyword in text.
      */
     public static int method1(String text, String keyword) {
         int count = 0;
@@ -92,10 +92,22 @@ public class Assignment2 {
         return count;
     }
 
+    /**
+     * Method 2 for searching for keyword in text
+     * @param text String of text to search
+     * @param keyword  The keyword for program to search for
+     * @return The occurrence of the keyword in text.
+     */
     public static int method2(String text, String keyword){
         return (text.length() - text.replace(keyword, "").length()) / keyword.length();
     }
 
+    /**
+     * Method 3 for searching for keyword in text
+     * @param text String of text to search
+     * @param keyword  The keyword for program to search for
+     * @return The occurrence of the keyword in text.
+     */
     public static int method3(String text, String keyword){
         return text.split(Pattern.quote(keyword), -1).length - 1;
     }
