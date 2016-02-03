@@ -24,25 +24,25 @@ public class Assignment2 {
         String text = getText(fileName);
 
         long startTime = System.nanoTime();
-        System.out.println("Occurrences: " + method1(text, keyword));
+        System.out.println("Method 1\nOccurences: " + method1(text, keyword));
         long endTime = System.nanoTime();
         double diffTime = (endTime - startTime)/1e6;
 
-        System.out.println(diffTime);
+        System.out.println("Time in NanoSeconds: " + diffTime);
 
         startTime = System.nanoTime();
-        System.out.println("Occurrences: " + method2(text, keyword));
+        System.out.println("Method 2\nOccurences: " + method2(text, keyword));
         endTime = System.nanoTime();
         diffTime = (endTime - startTime)/1e6;
 
-        System.out.println(diffTime);
+        System.out.println("Time in NanoSeconds: " + diffTime);
 
         startTime = System.nanoTime();
-        System.out.println("Occurrences: " + method3(text, keyword));
+        System.out.println("Method 3\nOccurences: " + method3(text, keyword));
         endTime = System.nanoTime();
         diffTime = (endTime - startTime)/1e6;
 
-        System.out.println(diffTime);
+        System.out.println("Time in NanoSeconds: " + diffTime);
     }
 
     /**
