@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="955a1157-c820-433a-9e76-171a41f7060f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Introduction to Java Programming Comprehensive Version.pdf" afterPath="$PROJECT_DIR$/../Introduction to Java Programming Comprehensive Version.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week2/Assignment2.class" afterPath="$PROJECT_DIR$/out/production/Week2/Assignment2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test.java" afterPath="$PROJECT_DIR$/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2.iml" afterPath="$PROJECT_DIR$/Week2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week2/hello.txt" afterPath="$PROJECT_DIR$/out/production/Week2/hello.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Assignment2.java" afterPath="$PROJECT_DIR$/src/Assignment2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hello.txt" afterPath="$PROJECT_DIR$/src/hello.txt" />
     </list>
     <ignored path="Assignment2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +29,13 @@
       <file leaf-file-name="Assignment2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Assignment2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29220778">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.5519481">
+              <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
+                <element signature="e#2864#2865#0" expanded="true" />
+                <element signature="e#2936#2937#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,7 +108,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -128,8 +118,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,7 +451,13 @@
       <option name="project" value="LOCAL" />
       <updated>1453909876462</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Progressing in Assignment 2">
+      <created>1454525501715</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1454525501715</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -505,7 +502,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished Assignments" />
     <MESSAGE value="Working on Assignment 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Assignment 2" />
+    <MESSAGE value="Progressing in Assignment 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Progressing in Assignment 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -523,6 +521,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -542,6 +542,29 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hello.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Assignment2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -553,6 +576,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,6 +589,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,6 +610,8 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -611,11 +640,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Assignment2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29220778">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.5519481">
+          <caret line="40" column="52" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
+            <element signature="e#2936#2937#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -5,10 +5,10 @@
 */
 
 import java.io.FileReader;
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Assignment2 {
 
@@ -22,14 +22,27 @@ public class Assignment2 {
         String keyword = scInput.nextLine();
 
         String text = getText(fileName);
-        System.err.println(text);
 
         long startTime = System.nanoTime();
-        System.out.println("Occurrences: " + mySearch(text, keyword));
+        System.out.println("Occurrences: " + method1(text, keyword));
         long endTime = System.nanoTime();
         double diffTime = (endTime - startTime)/1e6;
 
-        System.out.println(diffTime );
+        System.out.println(diffTime);
+
+        startTime = System.nanoTime();
+        System.out.println("Occurrences: " + method2(text, keyword));
+        endTime = System.nanoTime();
+        diffTime = (endTime - startTime)/1e6;
+
+        System.out.println(diffTime);
+
+        startTime = System.nanoTime();
+        System.out.println("Occurrences: " + method3(text, keyword));
+        endTime = System.nanoTime();
+        diffTime = (endTime - startTime)/1e6;
+
+        System.out.println(diffTime);
     }
 
     /**
@@ -66,7 +79,7 @@ public class Assignment2 {
      * @param keyword  The keyword for program to search for
      * @return The occurrence of the keyword in the given file.
      */
-    public static int mySearch(String text, String keyword) {
+    public static int method1(String text, String keyword) {
         int count = 0;
         int pos = 0;
         while (true) {
@@ -79,5 +92,11 @@ public class Assignment2 {
         return count;
     }
 
-    //public static int commonCount()
+    public static int method2(String text, String keyword){
+        return (text.length() - text.replace(keyword, "").length()) / keyword.length();
+    }
+
+    public static int method3(String text, String keyword){
+        return text.split(Pattern.quote(keyword), -1).length - 1;
+    }
 }
