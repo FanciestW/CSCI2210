@@ -13,35 +13,43 @@ import java.util.regex.Pattern;
 public class Assignment2 {
 
     public static void main(String[] args) {
+
         Scanner scInput = new Scanner(System.in);
 
+        //Gets filename in program directory so file needs to be in project folder
         System.out.print("File Path: ");
-        String fileName = System.getProperty("user.dir") + "/src/" + scInput.nextLine();
+        String fileName = System.getProperty("user.dir") + "/" + scInput.nextLine();
 
+        //Gets user inputted keyword
         System.out.print("Keyword: ");
         String keyword = scInput.nextLine();
 
+        //Reads file content to String text
         String text = getText(fileName);
 
-        long startTime = System.nanoTime();
-        System.out.println("Method 1\nOccurences: " + method1(text, keyword));
-        long endTime = System.nanoTime();
-        double diffTime = (endTime - startTime)/1e6;
+        //Initialize variable for time keeping
+        long startTime, endTime;
+        double diffTime;
 
-        System.out.println("Time in NanoSeconds: " + diffTime);
-
+        //Executes and times search method 1
         startTime = System.nanoTime();
-        System.out.println("Method 2\nOccurences: " + method2(text, keyword));
+        System.out.println("Method 1\nOccurrences: " + method1(text, keyword));
         endTime = System.nanoTime();
         diffTime = (endTime - startTime)/1e6;
-
         System.out.println("Time in NanoSeconds: " + diffTime);
 
+        //Executes and times search method 2
         startTime = System.nanoTime();
-        System.out.println("Method 3\nOccurences: " + method3(text, keyword));
+        System.out.println("Method 2\nOccurrences: " + method2(text, keyword));
         endTime = System.nanoTime();
         diffTime = (endTime - startTime)/1e6;
+        System.out.println("Time in NanoSeconds: " + diffTime);
 
+        //Executes and times search method 3
+        startTime = System.nanoTime();
+        System.out.println("Method 3\nOccurrences: " + method3(text, keyword));
+        endTime = System.nanoTime();
+        diffTime = (endTime - startTime)/1e6;
         System.out.println("Time in NanoSeconds: " + diffTime);
     }
 
@@ -54,11 +62,9 @@ public class Assignment2 {
         String text = "";
         try{
             FileReader fileReader = new FileReader(fileName);
-            int i ;
-
+            int i;
             while((i =  fileReader.read())!=-1){
                 char ch = (char)i;
-
                 text = text + ch;
             }
         }
