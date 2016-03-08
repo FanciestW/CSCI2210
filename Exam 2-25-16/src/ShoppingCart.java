@@ -4,7 +4,7 @@ public class ShoppingCart {
     private int cartId, productId, quantity, dateAdded;
     //=========================================================================
 
-    public boolean addCartItem(int productId){} //Missing a boolean return
+    public boolean addCartItem(int productId){ return true; } //Missing a boolean return
 
     public void deleteCartItem(){}
 
